@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press ⌃F5 to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+from src.chat_service import ChatService
+from src.config import AppConfig
+from src.lmstudio_client import LMStudioClient
+from src.ui import ChatUI
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def main() -> None:
+    config = AppConfig()
+    client = LMStudioClient()
+    service = ChatService()
+    app = ChatUI(config=config, client=client, chat_service=service)
+    app.run()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+if __name__ == "__main__":
+    main()

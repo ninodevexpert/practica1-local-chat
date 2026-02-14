@@ -1,6 +1,6 @@
 [project]
 name = "practica1-local-chat"
 version = "0.1.0"
-description = "Add your description here"
+description = "Local tkinter chat client connected to LM Studio"
 requires-python = ">=3.9"
 dependencies = []
